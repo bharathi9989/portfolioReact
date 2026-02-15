@@ -130,6 +130,7 @@ export default function App() {
             <div className="score-item">
               <div className="score-num">MERN</div>
               <div className="score-label">Stack</div>
+              <div className="score-label">Developer</div>
             </div>
           </div>
         </div>
@@ -210,7 +211,7 @@ export default function App() {
       </main>
 
       <section id="projects" className="projects">
-        <h2>Selected projects</h2>
+        <h2>projects</h2>
         <div className="project-grid">
           {projects.map((p) => (
             <ProjectCard key={p.title} {...p} />
@@ -227,7 +228,7 @@ export default function App() {
           </p>
           <p>Open to collaboration and new opportunities.</p>
         </div>
-        <div className="footer-note">Designed with a cricket theme 🏏</div>
+        <div className="footer-note">full stack developer 🏏</div>
       </footer>
     </div>
   );
