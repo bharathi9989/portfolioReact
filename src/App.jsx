@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+
+import Hero from "./components/Hero";
 
 function App() {
   return (
-    <div>App</div>
-  )
+    <>
+      <Hero />
+    </>
+  );
 }
 
-export default App
+export default App;
