@@ -1,18 +1,19 @@
-import React from "react";
-import Hero from "../components/HeroScoreboard";
-import About from "../components/About";
-import Skills from "../components/SkillsStats";
-import Projects from "../components/DugoutContact";
-import Contact from "../components/Contact";
+import HeroScoreboard from "../components/HeroScoreboard";
+import StadiumNav from "../components/StadiumNav";
+import SkillsStats from "../components/SkillsStats";
+import TrainingNets from "../components/TrainingNets";
+import TrophyCabinet from "../components/TrophyCabinet";
+import DugoutContact from "../components/DugoutContact";
 
 function Home() {
   return (
     <>
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
+      <HeroScoreboard />
+      <StadiumNav />
+      <SkillsStats />
+      <TrainingNets />
+      <TrophyCabinet />
+      <DugoutContact />
     </>
   );
 }
