@@ -74,9 +74,11 @@ function Hero() {
             View My Work
             <ArrowDown className="w-4 h-4" />
           </button>
-          href="/resume.pdf" download className="btn-outline flex items-center
-          gap-2 justify-center"
-          <a>
+          <a
+            href="/resume.pdf"
+            download
+            className="btn-outline flex items-center gap-2 justify-center"
+          >
             <Download className="w-4 h-4" />
             Download Resume
           </a>
