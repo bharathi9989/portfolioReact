@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { ArrowLeft, Github, ExternalLink, CheckCircle } from "lucide-react";
-import { projectsData } from "../components/DugoutContact";
+
 
 function ProjectDetail() {
   const { id } = useParams();
