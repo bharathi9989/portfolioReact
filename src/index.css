@@ -1,49 +1,70 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer base {
-  html {
-    scroll-behavior: smooth;
-  }
-
-  body {
-    @apply bg-gray-950 text-gray-100 font-sans antialiased;
-  }
-
-  ::-webkit-scrollbar {
-    width: 6px;
-  }
-
-  ::-webkit-scrollbar-track {
-    @apply bg-gray-900;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    @apply bg-primary-500 rounded-full;
-  }
+/* Base styles */
+html {
+  scroll-behavior: smooth;
 }
 
-@layer components {
+body {
+  background: #020617;
+  color: #f1f5f9;
+}
 
-  .gradient-text {
-    @apply bg-gradient-to-r from-primary-400 to-accent bg-clip-text text-transparent;
-  }
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
 
-  .glass-card {
-    @apply bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl;
-  }
+::-webkit-scrollbar-track {
+  background: #020617;
+}
 
-  .btn-primary {
-    @apply bg-primary-500 hover:bg-primary-600 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-primary-500/25 hover:-translate-y-0.5;
-  }
+::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+  border-radius: 9999px;
+}
 
-  .btn-outline {
-    @apply border border-primary-500 text-primary-400 hover:bg-primary-500 hover:text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 hover:-translate-y-0.5;
-  }
+/* Custom components */
 
-  .section-padding {
-    @apply px-6 py-20 md:px-12 lg:px-24;
-  }
+.gradient-text {
+  background: linear-gradient(to right, #60a5fa, #a855f7);
+  -webkit-background-clip: text;
+  color: transparent;
+}
 
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+}
+
+.btn-primary {
+  background: #3b82f6;
+  color: white;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 12px;
+  transition: all 0.3s;
+}
+
+.btn-primary:hover {
+  background: #2563eb;
+}
+
+.btn-outline {
+  border: 1px solid #3b82f6;
+  color: #60a5fa;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 12px;
+}
+
+.btn-outline:hover {
+  background: #3b82f6;
+  color: white;
+}
+
+.section-padding {
+  padding: 80px 24px;
 }
