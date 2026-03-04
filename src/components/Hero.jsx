@@ -1,4 +1,3 @@
-import React from "react";
 import { Github, Linkedin, Mail, Download, ArrowDown } from "lucide-react";
 
 function Hero() {
@@ -41,8 +40,8 @@ function Hero() {
 
         {/* Name */}
         <h1 className="text-5xl md:text-7xl font-extrabold mb-6 animate-slide-up">
-          <span className="text-white">Your </span>
-          <span className="gradient-text">Name</span>
+          <span className="text-white">VELUBHARATHI </span>
+          <span className="gradient-text"> S</span>
         </h1>
 
         {/* Title */}
