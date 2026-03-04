@@ -1,8 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import AppRouter from "./router/AppRouter";
+import CricketIntro from "./components/CricketIntro";
 
 function App() {
+  const [started, setStarted] = useState(false);
   const theme = useSelector((state) => state.theme.mode);
 
   useEffect(() => {
@@ -13,7 +15,15 @@ function App() {
     }
   }, [theme]);
 
-  return <AppRouter />;
+  return (
+    <>
+      {!started ? (
+        <CricketIntro startSite={() => setStarted(true)} />
+      ) : (
+        <AppRouter />
+      )}
+    </>
+  );
 }
 
 export default App;
