@@ -19,3 +19,9 @@
     0 0 5px #ff7300,
     0 0 15px #ff0000;
 }
+
+.fire-ball {
+  filter: drop-shadow(0 0 15px orange)
+          drop-shadow(0 0 35px red)
+          drop-shadow(0 0 60px orange);
+}
