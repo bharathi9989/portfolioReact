@@ -10,8 +10,8 @@ import html from "../assets/HTML5.png";
 import css from "../assets/CSS3.png";
 import tailwind from "../assets/Tailwind CSS.png";
 import mongo from "../assets/MongoDB.png";
-import postgres from "../assets/PostgreSQL.png";
-import express from "../assets/Express.png";
+import postgres from "../assets/PostgresSQL.png";
+import express from "../assets/Express.png";    
 
 function StadiumIntro() {
   const [showLogos, setShowLogos] = useState(false);
