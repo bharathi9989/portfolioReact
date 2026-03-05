@@ -2,7 +2,7 @@ import CountUp from "react-countup";
 
 function HeroScoreboard() {
   return (
-    <section className="min-h-screen flex items-center justify-center">
+    <section className="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-950 via-black to-gray-900">
       <div className="bg-black/60 border border-green-500 p-10 rounded-xl text-center">
         <h1 className="text-5xl font-bold mb-4">Velubharathi</h1>
 
