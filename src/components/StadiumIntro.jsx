@@ -1,92 +1,81 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-import ball from "../assets/cricket-ball.png";
-
-import react from "../assets/React.png";
-import node from "../assets/Node.js.png";
-import js from "../assets/JavaScript.png";
-import html from "../assets/HTML5.png";
 import css from "../assets/CSS3.png";
-import tailwind from "../assets/Tailwind CSS.png";
-import mongo from "../assets/MongoDB.png";
-import postgres from "../assets/PostgresSQL.png";
 import express from "../assets/Express.png";
+import html from "../assets/HTML5.png";
+import js from "../assets/JavaScript.png";
+import mongo from "../assets/MongoDB.png";
+import mysql from "../assets/MySQL.png";
+import node from "../assets/Node.js.png";
+import npm from "../assets/NPM.png";
+import postgres from "../assets/PostgresSQL.png";
+import python from "../assets/Python.png";
+import react from "../assets/React.png";
+import redux from "../assets/Redux.png";
+import tailwind from "../assets/Tailwind CSS.png";
+import ts from "../assets/TypeScript.png";
+import bg from "../assets/background.jpg";
+
+
 
 function StadiumIntro() {
-  const [showLogos, setShowLogos] = useState(false);
+  const [showName, setShowName] = useState(false);
 
   const logos = [
-    { src: react, x: -220, y: -120 },
-    { src: node, x: 220, y: -120 },
-    { src: js, x: -260, y: 80 },
-    { src: html, x: -120, y: 200 },
-    { src: css, x: 120, y: 200 },
-    { src: tailwind, x: 260, y: 80 },
-    { src: mongo, x: -60, y: -240 },
-    { src: postgres, x: 60, y: -240 },
-    { src: express, x: 0, y: 260 },
+    { src: react, x: -150, y: -120 },
+    { src: node, x: 150, y: -120 },
+    { src: js, x: -200, y: 40 },
+    { src: html, x: -80, y: 160 },
+    { src: css, x: 80, y: 160 },
+    { src: mongo, x: 200, y: 40 },
+    { src: mysql, x: -220, y: -40 },
+    { src: postgres, x: 220, y: -40 },
+    { src: express, x: 0, y: -200 },
+    { src: npm, x: -40, y: -240 },
+    { src: python, x: 40, y: -240 },
+    { src: redux, x: -160, y: 220 },
+    { src: tailwind, x: 160, y: 220 },
+    { src: ts, x: 0, y: 260 },
   ];
 
   return (
-    <div className="h-screen w-full bg-black flex items-center justify-center relative overflow-hidden">
-      {/* CRICKET BALL ENTRY */}
+    <div
+      className="h-screen flex items-center justify-center relative overflow-hidden"
+      style={{
+        backgroundImage: `url(${bg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      <div className="absolute inset-0 bg-black/70"></div>
 
-      <motion.img
-        src={ball}
-        initial={{ x: -600, y: -350, rotate: -180, scale: 0.5 }}
-        animate={{
-          x: [-600, -250, 0],
-          y: [-350, 150, 0],
-          rotate: [0, 180, 360],
-          scale: [0.5, 0.9, 1.4],
-        }}
-        transition={{
-          duration: 2.5,
-          ease: "easeOut",
-        }}
-        onAnimationComplete={() => setShowLogos(true)}
-        className="absolute w-44 drop-shadow-[0_0_60px_orange]"
-      />
-
-      {/* TECH LOGOS */}
-
-      {showLogos &&
-        logos.map((logo, index) => (
+      <div className="relative w-[450px] h-[450px] flex items-center justify-center">
+        {logos.map((logo, index) => (
           <motion.img
             key={index}
             src={logo.src}
-            initial={{
-              opacity: 0,
-              scale: 0,
-            }}
-            animate={{
-              opacity: 1,
-              scale: 1,
-              x: logo.x,
-              y: logo.y,
-            }}
-            transition={{
-              delay: index * 0.15,
-              type: "spring",
-              stiffness: 120,
-            }}
-            className="absolute w-16 drop-shadow-[0_0_25px_orange]"
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1, x: logo.x, y: logo.y }}
+            transition={{ delay: index * 0.35 }}
+            onAnimationComplete={() =>
+              index === logos.length - 1 && setShowName(true)
+            }
+            className="absolute w-14 burning-logo"
           />
         ))}
+      </div>
 
-      {/* NAME */}
-
-      {showLogos && (
+      {showName && (
         <motion.div
           initial={{ opacity: 0, y: 80 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.2 }}
+          transition={{ duration: 1 }}
           className="absolute bottom-24 text-center"
         >
-          <h1 className="text-5xl font-bold text-green-400">Velubharathi</h1>
+          <h1 className="text-5xl font-bold fire-text">Hi I'm Velubharathi</h1>
 
-          <p className="text-xl text-gray-400 mt-2">Full Stack Developer</p>
+          <p className="text-xl text-white mt-3">Full Stack Developer</p>
         </motion.div>
       )}
     </div>
