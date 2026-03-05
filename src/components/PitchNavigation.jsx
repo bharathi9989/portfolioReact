@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import hitSound from "../assets/sounds/bat-hit.mp3";
 
 function PitchNavigation() {
   const [open, setOpen] = useState(false);
@@ -11,7 +12,10 @@ function PitchNavigation() {
     { label: "Resume", id: "resume" },
     { label: "Contact", id: "contact" },
   ];
-
+  const playSound = () => {
+    const audio = new Audio(hitSound);
+    audio.play();
+  };
   return (
     <section className="py-40 text-center bg-gray-950">
       <h2 className="text-3xl mb-10 text-white">Hit the Ball to Explore</h2>

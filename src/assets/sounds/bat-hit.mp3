@@ -1,0 +1,7 @@
+<motion.div
+  onClick={() => {
+    playSound();
+    setOpen(!open);
+  }}
+  className="w-20 h-20 bg-red-600 rounded-full mx-auto cursor-pointer"
+/>;
