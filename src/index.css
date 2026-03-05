@@ -1,2 +1,21 @@
 @import "tailwindcss";
 
+.fire-text {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  text-shadow:
+    0 0 5px #ff3c00,
+    0 0 10px #ff3c00,
+    0 0 20px #ff7300,
+    0 0 40px #ff0000;
+}
+
+.fire-sub {
+  font-size: 22px;
+  color: #ffb347;
+  text-shadow:
+    0 0 5px #ff7300,
+    0 0 15px #ff0000;
+}
