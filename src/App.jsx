@@ -1,7 +1,15 @@
+import { useState } from "react";
 import AppRouter from "./router/AppRouter";
+import StadiumIntro from "./components/StadiumIntro";
 
 function App() {
-  return <AppRouter />;
+  const [enter, setEnter] = useState(false);
+
+  return (
+    <>
+      {!enter ? <StadiumIntro onEnter={() => setEnter(true)} /> : <AppRouter />}
+    </>
+  );
 }
 
 export default App;
