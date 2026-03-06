@@ -40,3 +40,26 @@
 .spin-slow {
   animation: orbitSpin 20s linear infinite;
 }
+/* orbit rotation */
+
+.orbit-container{
+  animation: orbitRotate 25s linear infinite;
+}
+
+@keyframes orbitRotate{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+/* glowing effect */
+
+.orbit-logo{
+  transform-origin: center;
+  filter:
+  drop-shadow(0 0 6px orange)
+  drop-shadow(0 0 12px red);
+}

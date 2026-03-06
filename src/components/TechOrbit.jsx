@@ -1,47 +1,59 @@
-import { useEffect } from "react";
+import react from "../assets/React.png";
+import node from "../assets/Node.js.png";
+import js from "../assets/JavaScript.png";
+import mongo from "../assets/MongoDB.png";
+import postgres from "../assets/PostgreSQL.png";
+import mysql from "../assets/MySQL.png";
+import css from "../assets/CSS3.png";
+import html from "../assets/HTML5.png";
+import tailwind from "../assets/Tailwind CSS.png";
+import redux from "../assets/Redux.png";
+import ts from "../assets/TypeScript.png";
+import express from "../assets/Express.png";
 
 const logos = [
-  "/logos/JavaScript.png",
-  "/logos/React.png",
-  "/logos/Node.js.png",
-  "/logos/MongoDB.png",
-  "/logos/PostgreSQL.png",
-  "/logos/MySQL.png",
-  "/logos/CSS3.png",
-  "/logos/HTML5.png",
-  "/logos/Tailwind CSS.png",
-  "/logos/Redux.png",
-  "/logos/TypeScript.png",
-  "/logos/Express.png",
+  react,
+  node,
+  js,
+  mongo,
+  postgres,
+  mysql,
+  css,
+  html,
+  tailwind,
+  redux,
+  ts,
+  express,
 ];
 
 export default function TechOrbit() {
-  useEffect(() => {
-    const items = document.querySelectorAll(".orbit-item");
-
-    items.forEach((item, index) => {
-      const angle = (360 / items.length) * index;
-
-      item.style.transform = `rotate(${angle}deg) translate(220px) rotate(-${angle}deg)`;
-    });
-  }, []);
-
   return (
-    <div className="relative w-[500px] h-[500px] mx-auto spin-slow">
-      {logos.map((logo, i) => (
-        <img
-          key={i}
-          src={logo}
-          className="orbit-item absolute w-14 h-14 drop-shadow-[0_0_15px_orange]"
-        />
-      ))}
+    <div className="relative flex items-center justify-center h-screen">
+      {/* Orbit container */}
+      <div className="orbit">
+        {logos.map((logo, index) => {
+          const angle = (360 / logos.length) * index;
 
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white">Hi I'm Velubharathi</h1>
+          return (
+            <img
+              key={index}
+              src={logo}
+              className="orbit-logo"
+              style={{
+                transform: `rotate(${angle}deg) translate(220px) rotate(-${angle}deg)`,
+              }}
+            />
+          );
+        })}
+      </div>
 
-          <p className="text-green-400 mt-2">Full Stack Developer</p>
-        </div>
+      {/* Center text */}
+      <div className="absolute text-center">
+        <h1 className="text-5xl font-bold text-orange-400 glow">
+          Hi I'm Velubharathi
+        </h1>
+
+        <p className="text-xl mt-3 text-white">Full Stack Developer</p>
       </div>
     </div>
   );
