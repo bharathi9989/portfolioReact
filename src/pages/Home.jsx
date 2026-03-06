@@ -4,6 +4,7 @@ import Projects from "../components/Projects";
 import DevStats from "../components/DevStats";
 import Navbar from "../components/Navbar";
 import StadiumIntro from "../components/Intro";
+import Skills from "../components/Skills";
 
 function Home() {
   return (
@@ -27,7 +28,7 @@ function Home() {
         </section>
         {/* SKILLS */}
         <section id="skills" className="py-32 text-center">
-          <DevStats />
+          <Skills />
         </section>
 
         {/* PROJECTS */}
