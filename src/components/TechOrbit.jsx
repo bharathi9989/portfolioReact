@@ -27,14 +27,12 @@ export default function TechOrbit() {
   }, []);
 
   return (
-    <div className="relative w-[500px] h-[500px] mx-auto">
+    <div className="relative w-[500px] h-[500px] mx-auto spin-slow">
       {logos.map((logo, i) => (
         <img
           key={i}
           src={logo}
-          className="orbit-item absolute w-14 h-14
-          animate-spin-slow
-          drop-shadow-[0_0_10px_orange]"
+          className="orbit-item absolute w-14 h-14 drop-shadow-[0_0_15px_orange]"
         />
       ))}
 
