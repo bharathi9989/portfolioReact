@@ -28,32 +28,27 @@ const logos = [
 
 export default function TechOrbit() {
   return (
-    <div className="relative flex items-center justify-center h-screen">
-      {/* Orbit container */}
-      <div className="orbit">
-        {logos.map((logo, index) => {
-          const angle = (360 / logos.length) * index;
+    <div className="hero">
+      <div className="orbit-container">
+        {logos.map((logo, i) => {
+          const angle = (360 / logos.length) * i;
 
           return (
             <img
-              key={index}
+              key={i}
               src={logo}
               className="orbit-logo"
               style={{
-                transform: `rotate(${angle}deg) translate(220px) rotate(-${angle}deg)`,
+                transform: `rotate(${angle}deg) translate(260px) rotate(-${angle}deg)`,
               }}
             />
           );
         })}
       </div>
 
-      {/* Center text */}
-      <div className="absolute text-center">
-        <h1 className="text-5xl font-bold text-orange-400 glow">
-          Hi I'm Velubharathi
-        </h1>
-
-        <p className="text-xl mt-3 text-white">Full Stack Developer</p>
+      <div className="center-text">
+        <h1>Hi I'm Velubharathi</h1>
+        <p>Full Stack Developer</p>
       </div>
     </div>
   );
