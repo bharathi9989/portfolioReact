@@ -1,7 +1,8 @@
-import StadiumIntro from "./components/StadiumIntro";
+
+import Home from "./pages/Home";
 
 function App() {
-  return <StadiumIntro />;
+  return <Home />;
 }
 
 export default App;

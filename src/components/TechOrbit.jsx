@@ -2,7 +2,7 @@ import react from "../assets/React.png";
 import node from "../assets/Node.js.png";
 import js from "../assets/JavaScript.png";
 import mongo from "../assets/MongoDB.png";
-import postgres from "../assets/PostgreSQL.png";
+import postgres from "../assets/PostgresSQL.png";
 import mysql from "../assets/MySQL.png";
 import css from "../assets/CSS3.png";
 import html from "../assets/HTML5.png";
