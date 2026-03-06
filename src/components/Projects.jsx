@@ -26,7 +26,6 @@ const projects = [
       { icon: react, name: "React" },
       { icon: node, name: "Node" },
       { icon: mongo, name: "MongoDB" },
-      { icon: express, name: "Express" },
     ],
   },
 
@@ -36,7 +35,6 @@ const projects = [
     link: constrctionProject,
     tech: [
       { icon: react, name: "React" },
-      { icon: tailwind, name: "Tailwind" },
       { icon: node, name: "Node" },
       { icon: postgres, name: "PostgreSQL" },
     ],
