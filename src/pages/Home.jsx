@@ -1,26 +1,20 @@
-import HeroScoreboard from "../components/HeroScoreboard";
-import PitchNavigation from "../components/PitchNavigation";
+import TechOrbit from "../components/TechOrbit";
+import ScrollLogos from "../components/ScrollLogos";
+import DevStats from "../components/DevStats";
+import Projects from "../components/Projects";
 
-function Home() {
+export default function Home() {
   return (
-    <>
-      <HeroScoreboard />
+    <div className="bg-black min-h-screen">
+      <ScrollLogos />
 
-      <PitchNavigation />
-
-      <section id="projects" className="py-40 text-center">
-        <h2 className="text-3xl">Projects Section</h2>
+      <section className="h-screen flex items-center justify-center">
+        <TechOrbit />
       </section>
 
-      <section id="skills" className="py-40 text-center">
-        <h2 className="text-3xl">Skills Section</h2>
-      </section>
+      <DevStats />
 
-      <section id="contact" className="py-40 text-center">
-        <h2 className="text-3xl">Contact Section</h2>
-      </section>
-    </>
+      <Projects />
+    </div>
   );
 }
-
-export default Home;
