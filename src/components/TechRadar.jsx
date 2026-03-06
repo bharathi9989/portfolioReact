@@ -13,7 +13,7 @@ import mongo from "../assets/MongoDB.png";
 import postgres from "../assets/PostgresSQL.png";
 import MySQL from "../assets/MySQL.png";
 
-import git from "../assets/GitHub.png";
+import git from "../assets/github.png";
 import npm from "../assets/NPM.png";
 import docker from "../assets/Docker.png";
 import aws from "../assets/AWS.png";

@@ -4,7 +4,6 @@ import bg from "../assets/projects-bg.jpg";
 import react from "../assets/React.png";
 import node from "../assets/Node.js.png";
 import mongo from "../assets/MongoDB.png";
-import express from "../assets/Express.png";
 import tailwind from "../assets/Tailwind CSS.png";
 import postgres from "../assets/PostgresSQL.png";
 import framer from "../assets/Framer Motion.png";
