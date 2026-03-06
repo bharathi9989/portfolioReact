@@ -1,42 +1,36 @@
-import { useEffect, useState } from "react";
+import { useRef } from "react";
 
 export default function Navbar() {
-  const [active, setActive] = useState("home");
+  const links = ["Home", "About", "Projects", "Skills", "Contact"];
 
-  useEffect(() => {
-    const sections = document.querySelectorAll("section");
+  function magnetic(e) {
+    const item = e.currentTarget;
+    const rect = item.getBoundingClientRect();
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActive(entry.target.id);
-          }
-        });
-      },
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
 
-      { threshold: 0.6 },
-    );
+    item.style.transform = `translate(${x * 0.25}px,${y * 0.25}px)`;
+  }
 
-    sections.forEach((section) => observer.observe(section));
-
-    return () => observer.disconnect();
-  }, []);
-
-  const links = ["home", "about", "projects", "skills", "contact"];
+  function reset(e) {
+    e.currentTarget.style.transform = "translate(0,0)";
+  }
 
   return (
     <nav className="navbar">
       <div className="logo">Velubharathi</div>
 
       <ul className="nav-links">
-        {links.map((link) => (
-          <li key={link}>
+        {links.map((link, i) => (
+          <li key={i}>
             <a
-              href={`#${link}`}
-              className={`nav-item ${active === link ? "active" : ""}`}
+              href={`#${link.toLowerCase()}`}
+              className="nav-item"
+              onMouseMove={magnetic}
+              onMouseLeave={reset}
             >
-              {link.charAt(0).toUpperCase() + link.slice(1)}
+              {link}
             </a>
           </li>
         ))}
