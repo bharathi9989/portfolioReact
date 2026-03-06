@@ -11,6 +11,8 @@ import redux from "../assets/Redux.png";
 import ts from "../assets/TypeScript.png";
 import express from "../assets/Express.png";
 
+
+
 const logos = [
   react,
   node,

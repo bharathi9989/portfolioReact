@@ -3,6 +3,7 @@ import About from "../components/About";
 import Projects from "../components/Projects";
 import DevStats from "../components/DevStats";
 import Navbar from "../components/Navbar";
+import StadiumIntro from "../components/StadiumIntro";
 
 function Home() {
   return (
@@ -14,7 +15,7 @@ function Home() {
           id="hero"
           className="h-screen flex items-center justify-center"
         >
-          <TechOrbit />
+          <StadiumIntro />
         </section>
 
         {/* ABOUT */}

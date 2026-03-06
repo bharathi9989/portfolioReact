@@ -15,28 +15,27 @@ import react from "../assets/React.png";
 import redux from "../assets/Redux.png";
 import tailwind from "../assets/Tailwind CSS.png";
 import ts from "../assets/TypeScript.png";
+
 import bg from "../assets/background.jpg";
 
-
-
 function StadiumIntro() {
-  const [showName, setShowName] = useState(false);
+  const [orbitStart, setOrbitStart] = useState(false);
 
   const logos = [
-    { src: react, x: -150, y: -120 },
-    { src: node, x: 150, y: -120 },
-    { src: js, x: -200, y: 40 },
-    { src: html, x: -80, y: 160 },
-    { src: css, x: 80, y: 160 },
-    { src: mongo, x: 200, y: 40 },
-    { src: mysql, x: -220, y: -40 },
-    { src: postgres, x: 220, y: -40 },
-    { src: express, x: 0, y: -200 },
-    { src: npm, x: -40, y: -240 },
-    { src: python, x: 40, y: -240 },
-    { src: redux, x: -160, y: 220 },
-    { src: tailwind, x: 160, y: 220 },
-    { src: ts, x: 0, y: 260 },
+    react,
+    node,
+    js,
+    mongo,
+    postgres,
+    mysql,
+    css,
+    html,
+    tailwind,
+    redux,
+    ts,
+    express,
+    npm,
+    python,
   ];
 
   return (
@@ -48,38 +47,62 @@ function StadiumIntro() {
         backgroundPosition: "center",
       }}
     >
+      {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/70"></div>
 
-      <div className="relative w-[450px] h-[450px] flex items-center justify-center">
-        {logos.map((logo, index) => (
-          <motion.img
-            key={index}
-            src={logo.src}
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1, x: logo.x, y: logo.y }}
-            transition={{ delay: index * 0.35 }}
-            onAnimationComplete={() =>
-              index === logos.length - 1 && setShowName(true)
-            }
-            className="absolute w-14 burning-logo"
-          />
-        ))}
+      {/* Logo container */}
+      <div className="relative w-[520px] h-[520px] flex items-center justify-center">
+        {logos.map((logo, index) => {
+          const angle = (360 / logos.length) * index;
+
+          return (
+            <motion.img
+              key={index}
+              src={logo}
+              initial={{
+                opacity: 0,
+                scale: 0,
+              }}
+              animate={
+                orbitStart
+                  ? {
+                      opacity: 1,
+                      scale: 1,
+                      rotate: angle,
+                      x: Math.cos((angle * Math.PI) / 180) * 220,
+                      y: Math.sin((angle * Math.PI) / 180) * 220,
+                    }
+                  : {
+                      opacity: 1,
+                      scale: 1,
+                    }
+              }
+              transition={{
+                delay: index * 0.3,
+                duration: 0.8,
+              }}
+              onAnimationComplete={() => {
+                if (index === logos.length - 1) {
+                  setOrbitStart(true);
+                }
+              }}
+              className="absolute w-14 orbit-logo"
+            />
+          );
+        })}
       </div>
 
-      {showName && (
-        <motion.div
-          initial={{ opacity: 0, y: 80 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="absolute bottom-24 text-center"
-        >
-          <div className="center-text">
-            <h1 className="dev-name">Hi I'm Velubharathi</h1>
+      {/* Name reveal */}
+      <motion.div
+        initial={{ opacity: 0, y: 60 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 4 }}
+        className="absolute bottom-24 text-center"
+      >
+        <h1 className="text-5xl font-bold text-white">Hi I'm Velubharathi</h1>
 
-            <p className="dev-role">Full Stack Developer</p>
-          </div>
-        </motion.div>
-      )}
+        <p className="text-green-400 text-xl mt-3">Full Stack Developer</p>
+      </motion.div>
     </div>
   );
 }
