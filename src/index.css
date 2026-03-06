@@ -383,3 +383,112 @@ font-weight:400;
 letter-spacing:1px;
 color:#22c55e;
 }
+
+/* NAVBAR */
+
+.navbar{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:20px 60px;
+
+backdrop-filter: blur(12px);
+background:rgba(0,0,0,0.4);
+
+border-bottom:1px solid rgba(255,255,255,0.05);
+
+z-index:100;
+
+}
+
+/* LOGO */
+
+.logo{
+
+font-size:20px;
+font-weight:600;
+letter-spacing:1px;
+color:white;
+
+}
+
+/* LINKS */
+
+.nav-links{
+
+display:flex;
+gap:40px;
+list-style:none;
+
+}
+
+/* LINK STYLE */
+
+.nav-item{
+
+position:relative;
+text-decoration:none;
+color:#aaa;
+font-size:16px;
+
+transition:all 0.35s ease;
+
+}
+
+/* HOVER */
+
+.nav-item:hover{
+
+color:#22c55e;
+
+}
+
+/* UNDERLINE ANIMATION */
+
+.nav-item::after{
+
+content:"";
+position:absolute;
+
+bottom:-6px;
+left:50%;
+
+width:0%;
+height:2px;
+
+background:#22c55e;
+
+transition:all 0.35s ease;
+
+transform:translateX(-50%);
+
+}
+
+.nav-item:hover::after{
+
+width:100%;
+
+}
+
+/* ACTIVE LINK */
+
+.nav-item.active{
+
+color:#22c55e;
+
+}
+
+.nav-item.active::after{
+
+width:100%;
+
+box-shadow:0 0 10px #22c55e;
+
+}

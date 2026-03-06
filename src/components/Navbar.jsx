@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function Navbar() {
-  const [active, setActive] = useState("hero");
+  const [active, setActive] = useState("home");
 
   useEffect(() => {
     const sections = document.querySelectorAll("section");
@@ -14,39 +14,33 @@ export default function Navbar() {
           }
         });
       },
-      { threshold: 0.5 },
+
+      { threshold: 0.6 },
     );
 
     sections.forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect();
   }, []);
 
-  const linkClass = (id) => `nav-link ${active === id ? "active" : ""}`;
+  const links = ["home", "about", "projects", "skills", "contact"];
 
   return (
     <nav className="navbar">
       <div className="logo">Velubharathi</div>
 
-      <div className="nav-links">
-        <a href="#hero" className={linkClass("hero")}>
-          Home
-        </a>
-
-        <a href="#about" className={linkClass("about")}>
-          About
-        </a>
-
-        <a href="#projects" className={linkClass("projects")}>
-          Projects
-        </a>
-
-        <a href="#skills" className={linkClass("skills")}>
-          Skills
-        </a>
-
-        <a href="#contact" className={linkClass("contact")}>
-          Contact
-        </a>
-      </div>
+      <ul className="nav-links">
+        {links.map((link) => (
+          <li key={link}>
+            <a
+              href={`#${link}`}
+              className={`nav-item ${active === link ? "active" : ""}`}
+            >
+              {link.charAt(0).toUpperCase() + link.slice(1)}
+            </a>
+          </li>
+        ))}
+      </ul>
     </nav>
   );
 }
