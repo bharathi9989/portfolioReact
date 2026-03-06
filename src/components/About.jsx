@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 import react from "../assets/React.png";
 import node from "../assets/Node.js.png";
 import js from "../assets/JavaScript.png";
@@ -6,37 +8,158 @@ import postgres from "../assets/PostgresSQL.png";
 import html from "../assets/HTML5.png";
 import css from "../assets/CSS3.png";
 
+import bg from "../assets/about-bg.jpg";
+
 const logos = [react, node, js, mongo, postgres, html, css];
 
 export default function About() {
   return (
-    <section className="about-section">
-      <div className="about-container">
-        {/* LEFT TEXT */}
+    <section
+      id="about"
+      style={{
+        height: "100vh",
+        width: "100%",
+        position: "relative",
+        overflow: "hidden",
+      }}
+    >
+      {/* BACKGROUND */}
 
-        <div className="about-text">
-          <h2>About Me</h2>
+      <motion.div
+        initial={{ x: 400 }}
+        whileInView={{ x: 0 }}
+        transition={{ duration: 1 }}
+        style={{
+          position: "absolute",
+          inset: 0,
+          backgroundImage: `url(${bg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      />
 
-          <p>
+      {/* DARK OVERLAY */}
+
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          background: "rgba(0,0,0,0.55)",
+        }}
+      />
+
+      {/* CONTENT */}
+
+      <div
+        style={{
+          position: "relative",
+          zIndex: 2,
+          width: "90%",
+          maxWidth: "1400px",
+          margin: "0 auto",
+          height: "100%",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+        }}
+      >
+        {/* TEXT */}
+
+        <motion.div
+          initial={{ x: -250 }}
+          whileInView={{ x: 0 }}
+          transition={{ duration: 1 }}
+          style={{ width: "600px", color: "white" }}
+        >
+          <h2
+            style={{
+              fontSize: "46px",
+              color: "#ffee32",
+              fontFamily: "cursive",
+              marginBottom: "20px",
+            }}
+          >
+            About Me
+          </h2>
+
+          <p style={{ fontSize: "20px", lineHeight: "1.7" }}>
             Hi, I'm a Well-qualified Full Stack Developer familiar with a wide
-            range of programming utilities and languages. Knowledgeable of
-            backend and frontend development requirements with database
-            management. Handles any part of the process with ease. Collaborative
-            team player with a willingness to learn and grow with the
-            organization.
+            range of programming utilities and languages.
           </p>
-        </div>
 
-        {/* RIGHT LOGO ROTATION */}
+          <p style={{ marginTop: "15px", fontSize: "20px", lineHeight: "1.7" }}>
+            Knowledgeable of backend and frontend development requirements with
+            database management. Handles any part of the process with ease.
+          </p>
 
-        <div className="logo-rotation">
-          <div className="logo-track">
-            {logos.map((logo, i) => (
-              <img key={i} src={logo} alt="tech" />
-            ))}
+          <p style={{ marginTop: "15px", fontSize: "20px", lineHeight: "1.7" }}>
+            Collaborative team player with a willingness to learn and grow with
+            the organization.
+          </p>
+        </motion.div>
+
+        {/* ORBIT CONTAINER */}
+
+        <div
+          style={{
+            width: "400px",
+            height: "400px",
+            position: "relative",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          {/* ROTATING CIRCLE */}
+
+          <div
+            style={{
+              position: "relative",
+              width: "350px",
+              height: "350px",
+              animation: "orbitRotate 20s linear infinite",
+            }}
+          >
+            {logos.map((logo, i) => {
+              const angle = (360 / logos.length) * i;
+
+              return (
+                <img
+                  key={i}
+                  src={logo}
+                  style={{
+                    position: "absolute",
+                    width: "70px",
+                    top: "50%",
+                    left: "50%",
+                    transform: `rotate(${angle}deg) translate(150px) rotate(-${angle}deg)`,
+                  }}
+                />
+              );
+            })}
           </div>
         </div>
       </div>
+
+      {/* ORBIT ROTATION */}
+
+      <style>
+        {`
+
+        @keyframes orbitRotate {
+
+          from {
+            transform: rotate(0deg);
+          }
+
+          to {
+            transform: rotate(360deg);
+          }
+
+        }
+
+        `}
+      </style>
     </section>
   );
 }
