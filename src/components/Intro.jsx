@@ -89,7 +89,7 @@ export default function Intro() {
           transition={{ duration: 1 }}
           className="absolute text-center"
         >
-          <h1 className="hero-name text-3xl">I'M VELUBHARATHI</h1>
+          <h1 className="hero-name text-4xl">I'M VELUBHARATHI</h1>
 
           <p className="hero-name text-4xl">Full Stack Developer</p>
         </motion.div>

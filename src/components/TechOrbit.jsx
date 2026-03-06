@@ -41,7 +41,7 @@ export default function TechOrbit() {
               src={logo}
               className="orbit-logo"
               style={{
-                transform: `rotate(${angle}deg) translate(260px) rotate(-${angle}deg)`,
+                transform: `rotate(${angle}deg) translate(220px) rotate(-${angle}deg)`,
               }}
             />
           );

@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+/* ---------- FIRE EFFECT ---------- */
+
 .fire-text {
   font-size: 48px;
   font-weight: bold;
@@ -21,48 +23,33 @@
 }
 
 .fire-ball {
-  filter: drop-shadow(0 0 15px orange)
-          drop-shadow(0 0 35px red)
-          drop-shadow(0 0 60px orange);
+  filter:
+    drop-shadow(0 0 15px orange)
+    drop-shadow(0 0 35px red)
+    drop-shadow(0 0 60px orange);
 }
-/* slow orbit animation */
+
+/* ---------- ORBIT ANIMATION ---------- */
 
 @keyframes orbitSpin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 .spin-slow {
   animation: orbitSpin 20s linear infinite;
 }
-/* orbit rotation */
 
-.orbit-container{
-  animation: orbitRotate 25s linear infinite;
+/* ---------- HERO ---------- */
+
+.hero{
+  position:relative;
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
-@keyframes orbitRotate{
-  from{
-    transform: rotate(0deg);
-  }
-  to{
-    transform: rotate(360deg);
-  }
-}
-
-/* glowing effect */
-
-.orbit-logo{
-  transform-origin: center;
-  filter:
-  drop-shadow(0 0 6px orange)
-  drop-shadow(0 0 12px red);
-}
 .orbit{
   position:absolute;
   width:500px;
@@ -71,25 +58,8 @@
 }
 
 @keyframes rotateOrbit{
-  from{
-    transform: rotate(0deg);
-  }
-
-  to{
-    transform: rotate(360deg);
-  }
-}
-
-.orbit-logo{
-  position:absolute;
-  top:50%;
-  left:50%;
-  width:50px;
-  height:50px;
-
-  filter:
-  drop-shadow(0 0 10px orange)
-  drop-shadow(0 0 20px red);
+  from{ transform:rotate(0deg); }
+  to{ transform:rotate(360deg); }
 }
 
 .glow{
@@ -98,82 +68,18 @@
   0 0 20px red,
   0 0 40px red;
 }
-.hero{
-  position:relative;
-  height:100vh;
 
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-.orbit-container{
-
-  position:absolute;
-  width:600px;
-  height:600px;
-
-  animation:rotateOrbit 30s linear infinite;
-
-}
-
-@keyframes rotateOrbit{
-
-  from{
-    transform:rotate(0deg);
-  }
-
-  to{
-    transform:rotate(360deg);
-  }
-
-}
-
-.orbit-logo{
-
-  position:absolute;
-  top:50%;
-  left:50%;
-
-  width:55px;
-
-  filter:
-  drop-shadow(0 0 10px orange)
-  drop-shadow(0 0 20px red);
-
-}
+/* ---------- CENTER TEXT ---------- */
 
 .center-text{
-
   text-align:center;
   z-index:2;
-
 }
 
-.center-text h1{
-
-  font-size:52px;
-  color:orange;
-
-  text-shadow:
-  0 0 10px orange,
-  0 0 20px red,
-  0 0 40px red;
-
-}
-
-.center-text p{
-
-  color:white;
-  font-size:20px;
-
-}
 .center-text h1{
   font-family: "Orbitron", sans-serif;
-
   font-size:64px;
   letter-spacing:2px;
-
   color:#ff6a00;
 
   text-shadow:
@@ -184,22 +90,19 @@
 
 .center-text p{
   font-family: "Inter", sans-serif;
-
   margin-top:10px;
-
   font-size:22px;
   color:#e5e5e5;
 }
+
+/* ---------- NAME ---------- */
+
 .dev-name{
   font-family: "Orbitron", sans-serif;
-
   font-size:72px;
   font-weight:700;
-
   letter-spacing:3px;
-
   color:#ff6a00;
-
   text-align:center;
 
   text-shadow:
@@ -209,83 +112,70 @@
 }
 
 .dev-role{
-
   margin-top:10px;
-
   font-family: "Inter", sans-serif;
-
   font-size:22px;
-
   color:#e6e6e6;
-
   letter-spacing:1px;
-
 }
+
+/* ---------- ABOUT SECTION ---------- */
+
 .about-section{
-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-background:#5c5876;
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#5c5876;
 }
 
 .about-container{
-width:1200px;
-display:flex;
-align-items:center;
-justify-content:space-between;
+  width:1200px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
 }
 
 .about-text{
-width:500px;
-color:black;
+  width:500px;
+  color:black;
 }
 
 .about-text h2{
-
-font-size:40px;
-color:#ffeb3b;
-font-family:cursive;
-margin-bottom:20px;
-
+  font-size:40px;
+  color:#ffeb3b;
+  font-family:cursive;
+  margin-bottom:20px;
 }
 
 .about-text p{
-
-font-size:18px;
-line-height:1.6;
-
+  font-size:18px;
+  line-height:1.6;
 }
 
+/* ---------- 3D LOGO ROTATION ---------- */
+
 .logo-rotation{
-width:350px;
-height:350px;
-perspective:1000px;
+  width:350px;
+  height:350px;
+  perspective:1000px;
 }
 
 .logo-track{
-
-width:100%;
-height:100%;
-position:relative;
-
-animation:rotate3d 10s linear infinite;
-
-transform-style:preserve-3d;
-
+  width:100%;
+  height:100%;
+  position:relative;
+  animation:rotate3d 10s linear infinite;
+  transform-style:preserve-3d;
 }
 
 .logo-track img{
-
-position:absolute;
-width:70px;
-height:70px;
-
-top:50%;
-left:50%;
-
-transform-origin:center;
-
+  position:absolute;
+  width:70px;
+  height:70px;
+  top:50%;
+  left:50%;
+  transform-origin:center;
 }
 
 .logo-track img:nth-child(1){ transform:rotateY(0deg) translateZ(150px);}
@@ -296,199 +186,122 @@ transform-origin:center;
 .logo-track img:nth-child(6){ transform:rotateY(300deg) translateZ(150px);}
 
 @keyframes rotate3d{
-
-from{
-transform:rotateY(0deg);
+  from{ transform:rotateY(0deg); }
+  to{ transform:rotateY(360deg); }
 }
 
-to{
-transform:rotateY(360deg);
-}
-
-}
-/* NAVBAR */
+/* ---------- NAVBAR ---------- */
 
 .navbar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
 
-position:fixed;
-top:0;
-width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 
-display:flex;
-justify-content:space-between;
-align-items:center;
+  padding:20px 60px;
 
-padding:18px 60px;
+  backdrop-filter: blur(12px);
+  background:rgba(0,0,0,0.4);
 
-background:rgba(0,0,0,0.6);
-backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(255,255,255,0.05);
 
-z-index:1000;
-
+  z-index:1000;
 }
 
 .logo{
-
-font-size:20px;
-font-weight:700;
-color:white;
-
-letter-spacing:1px;
-
+  font-size:20px;
+  font-weight:600;
+  letter-spacing:1px;
+  color:white;
 }
 
 .nav-links{
-
-display:flex;
-gap:35px;
-
+  display:flex;
+  gap:40px;
+  list-style:none;
 }
-
-.nav-link{
-
-color:#cfcfcf;
-text-decoration:none;
-font-size:16px;
-
-transition:0.3s;
-
-}
-
-.nav-link:hover{
-
-color:white;
-
-}
-
-.nav-link.active{
-
-color:#00ff9c;
-
-font-weight:600;
-
-}
-html{
-scroll-behavior:smooth;
-}
-.hero-name{
-font-family: 'Orbitron', sans-serif;
-font-weight:700;
-letter-spacing:2px;
-text-shadow:0 0 25px #22c55e;
-}
-
-.hero-role{
-font-family:'Poppins', sans-serif;
-font-weight:400;
-letter-spacing:1px;
-color:#22c55e;
-}
-
-/* NAVBAR */
-
-.navbar{
-
-position:fixed;
-top:0;
-left:0;
-width:100%;
-
-display:flex;
-justify-content:space-between;
-align-items:center;
-
-padding:20px 60px;
-
-backdrop-filter: blur(12px);
-background:rgba(0,0,0,0.4);
-
-border-bottom:1px solid rgba(255,255,255,0.05);
-
-z-index:100;
-
-}
-
-/* LOGO */
-
-.logo{
-
-font-size:20px;
-font-weight:600;
-letter-spacing:1px;
-color:white;
-
-}
-
-/* LINKS */
-
-.nav-links{
-
-display:flex;
-gap:40px;
-list-style:none;
-
-}
-
-/* LINK STYLE */
 
 .nav-item{
-
-position:relative;
-text-decoration:none;
-color:#aaa;
-font-size:16px;
-
-transition:all 0.35s ease;
-
+  position:relative;
+  text-decoration:none;
+  color:#aaa;
+  font-size:16px;
+  transition:all 0.35s ease;
 }
-
-/* HOVER */
 
 .nav-item:hover{
-
-color:#22c55e;
-
+  color:#22c55e;
 }
 
-/* UNDERLINE ANIMATION */
-
 .nav-item::after{
-
-content:"";
-position:absolute;
-
-bottom:-6px;
-left:50%;
-
-width:0%;
-height:2px;
-
-background:#22c55e;
-
-transition:all 0.35s ease;
-
-transform:translateX(-50%);
-
+  content:"";
+  position:absolute;
+  bottom:-6px;
+  left:50%;
+  width:0%;
+  height:2px;
+  background:#22c55e;
+  transition:all 0.35s ease;
+  transform:translateX(-50%);
 }
 
 .nav-item:hover::after{
-
-width:100%;
-
+  width:100%;
 }
 
-/* ACTIVE LINK */
-
 .nav-item.active{
-
-color:#22c55e;
-
+  color:#22c55e;
 }
 
 .nav-item.active::after{
+  width:100%;
+  box-shadow:0 0 10px #22c55e;
+}
 
-width:100%;
+/* ---------- HERO FONT ---------- */
 
-box-shadow:0 0 10px #22c55e;
+.hero-name{
+  font-family:'Orbitron', sans-serif;
+  font-weight:700;
+  letter-spacing:2px;
+  text-shadow:0 0 25px #22c55e;
+}
 
+.hero-role{
+  font-family:'Poppins', sans-serif;
+  font-weight:400;
+  letter-spacing:1px;
+  color:#22c55e;
+}
+
+/* ---------- ORBIT LOGO ---------- */
+
+.orbit-container{
+  position:relative;
+  width:500px;
+  height:500px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  animation:orbitRotate 40s linear infinite;
+}
+
+.orbit-logo{
+  position:absolute;
+  width:55px;
+  transition:transform 0.3s;
+}
+
+.orbit-logo:hover{
+  transform:scale(1.2);
+}
+
+/* ---------- GLOBAL ---------- */
+
+html{
+  scroll-behavior:smooth;
 }
