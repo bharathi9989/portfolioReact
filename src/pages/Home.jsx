@@ -3,7 +3,7 @@ import About from "../components/About";
 import Projects from "../components/Projects";
 
 import Navbar from "../components/Navbar";
-import StadiumIntro from "../components/Intro";
+import Intro from "../components/Intro";
 import Skills from "../components/Skills";
 import Contact from "../components/Contact";
 
@@ -14,10 +14,10 @@ function Home() {
         <Navbar />
         {/* HERO */}
         <section
-          id="hero"
+          id="home"
           className="h-screen flex items-center justify-center"
         >
-          <StadiumIntro />
+          <Intro />
         </section>
 
         {/* ABOUT */}
