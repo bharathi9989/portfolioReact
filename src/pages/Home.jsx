@@ -5,6 +5,7 @@ import Projects from "../components/Projects";
 import Navbar from "../components/Navbar";
 import Intro from "../components/Intro";
 import Skills from "../components/Skills";
+import TechRadar from "../components/TechRadar";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 
@@ -33,6 +34,10 @@ function Home() {
           <Skills />
         </section>
 
+        {/* TechRadar */}
+        <section id="skills" className="py-32 text-center">
+          <TechRadar />
+        </section>
         {/* PROJECTS */}
         <section id="projects" className="py-32 text-center">
           <Projects />
@@ -40,13 +45,11 @@ function Home() {
 
         {/* CONTACT */}
         <section>
-
-        <Contact />
+          <Contact />
         </section>
         <section>
-          <Footer/>
+          <Footer />
         </section>
-
       </div>
     </>
   );
