@@ -23,17 +23,19 @@
 }
 
 .fire-ball {
-  filter:
-    drop-shadow(0 0 15px orange)
-    drop-shadow(0 0 35px red)
+  filter: drop-shadow(0 0 15px orange) drop-shadow(0 0 35px red)
     drop-shadow(0 0 60px orange);
 }
 
 /* ---------- ORBIT ANIMATION ---------- */
 
 @keyframes orbitSpin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .spin-slow {
@@ -42,328 +44,338 @@
 
 /* ---------- HERO ---------- */
 
-.hero{
-  position:relative;
-  height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.orbit{
-  position:absolute;
-  width:500px;
-  height:500px;
+.orbit {
+  position: absolute;
+  width: 500px;
+  height: 500px;
   animation: rotateOrbit 25s linear infinite;
 }
 
-@keyframes rotateOrbit{
-  from{ transform:rotate(0deg); }
-  to{ transform:rotate(360deg); }
+@keyframes rotateOrbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-.glow{
+.glow {
   text-shadow:
-  0 0 10px orange,
-  0 0 20px red,
-  0 0 40px red;
+    0 0 10px orange,
+    0 0 20px red,
+    0 0 40px red;
 }
 
 /* ---------- CENTER TEXT ---------- */
 
-.center-text{
-  text-align:center;
-  z-index:2;
+.center-text {
+  text-align: center;
+  z-index: 2;
 }
 
-.center-text h1{
+.center-text h1 {
   font-family: "Orbitron", sans-serif;
-  font-size:64px;
-  letter-spacing:2px;
-  color:#ff6a00;
+  font-size: 64px;
+  letter-spacing: 2px;
+  color: #ff6a00;
 
   text-shadow:
-  0 0 10px #ff6a00,
-  0 0 20px #ff0000,
-  0 0 40px #ff0000;
+    0 0 10px #ff6a00,
+    0 0 20px #ff0000,
+    0 0 40px #ff0000;
 }
 
-.center-text p{
+.center-text p {
   font-family: "Inter", sans-serif;
-  margin-top:10px;
-  font-size:22px;
-  color:#e5e5e5;
+  margin-top: 10px;
+  font-size: 22px;
+  color: #e5e5e5;
 }
 
 /* ---------- NAME ---------- */
 
-.dev-name{
+.dev-name {
   font-family: "Orbitron", sans-serif;
-  font-size:72px;
-  font-weight:700;
-  letter-spacing:3px;
-  color:#ff6a00;
-  text-align:center;
+  font-size: 72px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #ff6a00;
+  text-align: center;
 
   text-shadow:
-  0 0 10px #ff6a00,
-  0 0 20px #ff3300,
-  0 0 40px #ff0000;
+    0 0 10px #ff6a00,
+    0 0 20px #ff3300,
+    0 0 40px #ff0000;
 }
 
-.dev-role{
-  margin-top:10px;
+.dev-role {
+  margin-top: 10px;
   font-family: "Inter", sans-serif;
-  font-size:22px;
-  color:#e6e6e6;
-  letter-spacing:1px;
+  font-size: 22px;
+  color: #e6e6e6;
+  letter-spacing: 1px;
 }
 
 /* ---------- ABOUT SECTION ---------- */
 
-.about-section{
-  height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:#5c5876;
+.about-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #5c5876;
 }
 
-.about-container{
-  width:1200px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
+.about-container {
+  width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.about-text{
-  width:500px;
-  color:black;
+.about-text {
+  width: 500px;
+  color: black;
 }
 
-.about-text h2{
-  font-size:40px;
-  color:#ffeb3b;
-  font-family:cursive;
-  margin-bottom:20px;
+.about-text h2 {
+  font-size: 40px;
+  color: #ffeb3b;
+  font-family: cursive;
+  margin-bottom: 20px;
 }
 
-.about-text p{
-  font-size:18px;
-  line-height:1.6;
+.about-text p {
+  font-size: 18px;
+  line-height: 1.6;
 }
 
 /* ---------- 3D LOGO ROTATION ---------- */
 
-.logo-rotation{
-  width:350px;
-  height:350px;
-  perspective:1000px;
+.logo-rotation {
+  width: 350px;
+  height: 350px;
+  perspective: 1000px;
 }
 
-.logo-track{
-  width:100%;
-  height:100%;
-  position:relative;
-  animation:rotate3d 10s linear infinite;
-  transform-style:preserve-3d;
+.logo-track {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  animation: rotate3d 10s linear infinite;
+  transform-style: preserve-3d;
 }
 
-.logo-track img{
-  position:absolute;
-  width:70px;
-  height:70px;
-  top:50%;
-  left:50%;
-  transform-origin:center;
+.logo-track img {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
 }
 
-.logo-track img:nth-child(1){ transform:rotateY(0deg) translateZ(150px);}
-.logo-track img:nth-child(2){ transform:rotateY(60deg) translateZ(150px);}
-.logo-track img:nth-child(3){ transform:rotateY(120deg) translateZ(150px);}
-.logo-track img:nth-child(4){ transform:rotateY(180deg) translateZ(150px);}
-.logo-track img:nth-child(5){ transform:rotateY(240deg) translateZ(150px);}
-.logo-track img:nth-child(6){ transform:rotateY(300deg) translateZ(150px);}
+.logo-track img:nth-child(1) {
+  transform: rotateY(0deg) translateZ(150px);
+}
+.logo-track img:nth-child(2) {
+  transform: rotateY(60deg) translateZ(150px);
+}
+.logo-track img:nth-child(3) {
+  transform: rotateY(120deg) translateZ(150px);
+}
+.logo-track img:nth-child(4) {
+  transform: rotateY(180deg) translateZ(150px);
+}
+.logo-track img:nth-child(5) {
+  transform: rotateY(240deg) translateZ(150px);
+}
+.logo-track img:nth-child(6) {
+  transform: rotateY(300deg) translateZ(150px);
+}
 
-@keyframes rotate3d{
-  from{ transform:rotateY(0deg); }
-  to{ transform:rotateY(360deg); }
+@keyframes rotate3d {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
 }
 
 /* ---------- NAVBAR ---------- */
 
-.navbar{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-  padding:20px 60px;
+  padding: 20px 60px;
 
   backdrop-filter: blur(12px);
-  background:rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.4);
 
-  border-bottom:1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 
-  z-index:1000;
+  z-index: 1000;
 }
 
-.logo{
-  font-size:20px;
-  font-weight:600;
-  letter-spacing:1px;
-  color:white;
+.logo {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: white;
 }
 
-.nav-links{
-  display:flex;
-  gap:40px;
-  list-style:none;
+.nav-links {
+  display: flex;
+  gap: 40px;
+  list-style: none;
 }
 
-.nav-item{
-  position:relative;
-  text-decoration:none;
-  color:#aaa;
-  font-size:16px;
-  transition:all 0.35s ease;
+.nav-item {
+  position: relative;
+  text-decoration: none;
+  color: #aaa;
+  font-size: 16px;
+  transition: all 0.35s ease;
 }
 
-.nav-item:hover{
-  color:#22c55e;
+.nav-item:hover {
+  color: #22c55e;
 }
 
-.nav-item::after{
-  content:"";
-  position:absolute;
-  bottom:-6px;
-  left:50%;
-  width:0%;
-  height:2px;
-  background:#22c55e;
-  transition:all 0.35s ease;
-  transform:translateX(-50%);
+.nav-item::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  width: 0%;
+  height: 2px;
+  background: #22c55e;
+  transition: all 0.35s ease;
+  transform: translateX(-50%);
 }
 
-.nav-item:hover::after{
-  width:100%;
+.nav-item:hover::after {
+  width: 100%;
 }
 
-.nav-item.active{
-  color:#22c55e;
+.nav-item.active {
+  color: #22c55e;
 }
 
-.nav-item.active::after{
-  width:100%;
-  box-shadow:0 0 10px #22c55e;
+.nav-item.active::after {
+  width: 100%;
+  box-shadow: 0 0 10px #22c55e;
 }
 
 /* ---------- HERO FONT ---------- */
 
-.hero-name{
-  font-family:'Orbitron', sans-serif;
-  font-weight:700;
-  letter-spacing:2px;
-  text-shadow:0 0 25px #22c55e;
+.hero-name {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-shadow: 0 0 25px #22c55e;
 }
 
-.hero-role{
-  font-family:'Poppins', sans-serif;
-  font-weight:400;
-  letter-spacing:1px;
-  color:#22c55e;
+.hero-role {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #22c55e;
 }
 
 /* ---------- ORBIT LOGO ---------- */
 
-.orbit-container{
-  position:relative;
-  width:500px;
-  height:500px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  animation:orbitRotate 40s linear infinite;
+.orbit-container {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: orbitRotate 40s linear infinite;
 }
 
-.orbit-logo{
-  position:absolute;
-  width:55px;
-  transition:transform 0.3s;
+.orbit-logo {
+  position: absolute;
+  width: 55px;
+  transition: transform 0.3s;
 }
 
-.orbit-logo:hover{
-  transform:scale(1.2);
+.orbit-logo:hover {
+  transform: scale(1.2);
 }
 
 /* ---------- GLOBAL ---------- */
 
-html{
-  scroll-behavior:smooth;
+html {
+  scroll-behavior: smooth;
 }
 /* PROJECT SECTION */
 
-.projects-section{
-
-min-height:100vh;
-padding:120px 80px;
-background:#0b0b0b;
-
+.projects-section {
+  min-height: 100vh;
+  padding: 120px 80px;
+  background: #0b0b0b;
 }
 
-.section-title{
-
-font-size:42px;
-margin-bottom:60px;
-text-align:center;
-
+.section-title {
+  font-size: 42px;
+  margin-bottom: 60px;
+  text-align: center;
 }
 
-.projects-grid{
-
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:40px;
-
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
 }
 
 /* CARD */
 
-.project-card{
+.project-card {
+  background: #111;
+  padding: 30px;
+  border-radius: 10px;
 
-background:#111;
-padding:30px;
-border-radius:10px;
+  transition: 0.35s;
 
-transition:0.35s;
-
-border:1px solid rgba(255,255,255,0.05);
-
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.project-card:hover{
-
-box-shadow:
-0 20px 40px rgba(0,0,0,0.6),
-0 0 25px #22c55e;
-
+.project-card:hover {
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.6),
+    0 0 25px #22c55e;
 }
 
-.project-card h3{
-
-font-size:22px;
-margin-bottom:10px;
-
+.project-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
 }
 
-.project-card span{
-
-display:block;
-margin-top:15px;
-color:#22c55e;
-
+.project-card span {
+  display: block;
+  margin-top: 15px;
+  color: #22c55e;
+}
+input::placeholder,
+textarea::placeholder {
+  color: #9ca3af;
 }
