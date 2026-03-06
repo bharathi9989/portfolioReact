@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 import react from "../assets/React.png";
 import node from "../assets/Node.js.png";
@@ -13,9 +14,26 @@ import bg from "../assets/about-bg.jpg";
 const logos = [react, node, js, mongo, postgres, html, css];
 
 export default function About() {
+  const [rotateX, setRotateX] = useState(0);
+  const [rotateY, setRotateY] = useState(0);
+
+  function handleMouseMove(e) {
+    const rect = e.currentTarget.getBoundingClientRect();
+
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const rotateY = (x / rect.width - 0.5) * 20;
+    const rotateX = -(y / rect.height - 0.5) * 20;
+
+    setRotateX(rotateX);
+    setRotateY(rotateY);
+  }
+
   return (
     <section
       id="about"
+      onMouseMove={handleMouseMove}
       style={{
         height: "100vh",
         width: "100%",
@@ -38,13 +56,11 @@ export default function About() {
         }}
       />
 
-      {/* DARK OVERLAY */}
-
       <div
         style={{
           position: "absolute",
           inset: 0,
-          background: "rgba(0,0,0,0.55)",
+          background: "rgba(0,0,0,0.6)",
         }}
       />
 
@@ -98,25 +114,25 @@ export default function About() {
           </p>
         </motion.div>
 
-        {/* ORBIT CONTAINER */}
+        {/* ORBIT SYSTEM */}
 
         <div
           style={{
-            width: "400px",
-            height: "400px",
-            position: "relative",
+            width: "420px",
+            height: "420px",
+            perspective: "1000px",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
           }}
         >
-          {/* ROTATING CIRCLE */}
-
           <div
             style={{
               position: "relative",
-              width: "350px",
-              height: "350px",
+              width: "360px",
+              height: "360px",
+              transformStyle: "preserve-3d",
+              transform: `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
               animation: "orbitRotate 20s linear infinite",
             }}
           >
@@ -127,12 +143,13 @@ export default function About() {
                 <img
                   key={i}
                   src={logo}
+                  className="orbit-logo"
                   style={{
                     position: "absolute",
                     width: "70px",
                     top: "50%",
                     left: "50%",
-                    transform: `rotate(${angle}deg) translate(150px) rotate(-${angle}deg)`,
+                    transform: `rotate(${angle}deg) translate(160px) rotate(-${angle}deg)`,
                   }}
                 />
               );
@@ -141,20 +158,32 @@ export default function About() {
         </div>
       </div>
 
-      {/* ORBIT ROTATION */}
-
       <style>
         {`
 
-        @keyframes orbitRotate {
+        @keyframes orbitRotate{
 
-          from {
-            transform: rotate(0deg);
+          from{
+            transform:rotateZ(0deg);
           }
 
-          to {
-            transform: rotate(360deg);
+          to{
+            transform:rotateZ(360deg);
           }
+
+        }
+
+        .orbit-logo{
+
+          transition:0.35s;
+
+        }
+
+        .orbit-logo:hover{
+
+          transform:scale(1.2)
+          drop-shadow(0 0 15px #22c55e)
+          drop-shadow(0 0 35px #22c55e);
 
         }
 
