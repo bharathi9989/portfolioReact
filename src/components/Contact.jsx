@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import bg from "../assets/contact-bg.jpg";
 
-import github from "../assets/Github.png";
-import linkedin from "../assets/LinkedIn.png";
+import github from "../assets/github.png";
+import linkedin from "../assets/linkedin.png";
 import mail from "../assets/Mail.png";
 
 export default function Contact() {
