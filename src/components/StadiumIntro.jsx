@@ -73,9 +73,11 @@ function StadiumIntro() {
           transition={{ duration: 1 }}
           className="absolute bottom-24 text-center"
         >
-          <h1 className="text-5xl font-bold fire-text">Hi I'm Velubharathi</h1>
+          <div className="center-text">
+            <h1 className="dev-name">Hi I'm Velubharathi</h1>
 
-          <p className="text-xl text-white mt-3">Full Stack Developer</p>
+            <p className="dev-role">Full Stack Developer</p>
+          </div>
         </motion.div>
       )}
     </div>

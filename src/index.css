@@ -168,3 +168,141 @@
   font-size:20px;
 
 }
+.center-text h1{
+  font-family: "Orbitron", sans-serif;
+
+  font-size:64px;
+  letter-spacing:2px;
+
+  color:#ff6a00;
+
+  text-shadow:
+  0 0 10px #ff6a00,
+  0 0 20px #ff0000,
+  0 0 40px #ff0000;
+}
+
+.center-text p{
+  font-family: "Inter", sans-serif;
+
+  margin-top:10px;
+
+  font-size:22px;
+  color:#e5e5e5;
+}
+.dev-name{
+  font-family: "Orbitron", sans-serif;
+
+  font-size:72px;
+  font-weight:700;
+
+  letter-spacing:3px;
+
+  color:#ff6a00;
+
+  text-align:center;
+
+  text-shadow:
+  0 0 10px #ff6a00,
+  0 0 20px #ff3300,
+  0 0 40px #ff0000;
+}
+
+.dev-role{
+
+  margin-top:10px;
+
+  font-family: "Inter", sans-serif;
+
+  font-size:22px;
+
+  color:#e6e6e6;
+
+  letter-spacing:1px;
+
+}
+.about-section{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#5c5876;
+}
+
+.about-container{
+width:1200px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.about-text{
+width:500px;
+color:black;
+}
+
+.about-text h2{
+
+font-size:40px;
+color:#ffeb3b;
+font-family:cursive;
+margin-bottom:20px;
+
+}
+
+.about-text p{
+
+font-size:18px;
+line-height:1.6;
+
+}
+
+.logo-rotation{
+width:350px;
+height:350px;
+perspective:1000px;
+}
+
+.logo-track{
+
+width:100%;
+height:100%;
+position:relative;
+
+animation:rotate3d 10s linear infinite;
+
+transform-style:preserve-3d;
+
+}
+
+.logo-track img{
+
+position:absolute;
+width:70px;
+height:70px;
+
+top:50%;
+left:50%;
+
+transform-origin:center;
+
+}
+
+.logo-track img:nth-child(1){ transform:rotateY(0deg) translateZ(150px);}
+.logo-track img:nth-child(2){ transform:rotateY(60deg) translateZ(150px);}
+.logo-track img:nth-child(3){ transform:rotateY(120deg) translateZ(150px);}
+.logo-track img:nth-child(4){ transform:rotateY(180deg) translateZ(150px);}
+.logo-track img:nth-child(5){ transform:rotateY(240deg) translateZ(150px);}
+.logo-track img:nth-child(6){ transform:rotateY(300deg) translateZ(150px);}
+
+@keyframes rotate3d{
+
+from{
+transform:rotateY(0deg);
+}
+
+to{
+transform:rotateY(360deg);
+}
+
+}
