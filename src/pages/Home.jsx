@@ -1,4 +1,4 @@
-import TechOrbit from "../components/TechOrbit";
+
 import About from "../components/About";
 import Projects from "../components/Projects";
 
@@ -6,11 +6,12 @@ import Navbar from "../components/Navbar";
 import Intro from "../components/Intro";
 import Skills from "../components/Skills";
 import Contact from "../components/Contact";
+import Footer from "../components/Footer";
 
 function Home() {
   return (
     <>
-      <div className="bg-black text-white min-h-screen">
+      <div className="bg-black text-white min-h-screen relative">
         <Navbar />
         {/* HERO */}
         <section
@@ -38,7 +39,14 @@ function Home() {
         </section>
 
         {/* CONTACT */}
+        <section>
+
         <Contact />
+        </section>
+        <section>
+          <Footer/>
+        </section>
+
       </div>
     </>
   );

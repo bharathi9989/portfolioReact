@@ -96,7 +96,7 @@ export default function Contact() {
             {/* EMAIL */}
 
             <motion.a
-              href="mailto:velubharathi@email.com"
+              href="mailto:er.velubharathi.s@email.com"
               whileHover={{ scale: 1.05 }}
               style={{
                 display: "flex",
