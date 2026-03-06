@@ -25,15 +25,14 @@ function Home() {
         >
           <About />
         </section>
+        {/* SKILLS */}
+        <section id="skills" className="py-32 text-center">
+          <DevStats />
+        </section>
 
         {/* PROJECTS */}
         <section id="projects" className="py-32 text-center">
           <Projects />
-        </section>
-
-        {/* SKILLS */}
-        <section id="skills" className="py-32 text-center">
-          <DevStats />
         </section>
 
         {/* CONTACT */}
