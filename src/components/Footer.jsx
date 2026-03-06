@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-import github from "../assets/github.png";
+import github from "../assets/Github.png";
 import linkedin from "../assets/linkedin.png";
 import mail from "../assets/mail.png";
 
