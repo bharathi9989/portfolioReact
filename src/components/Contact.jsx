@@ -225,13 +225,14 @@ export default function Contact() {
             />
 
             <button
+              type="button"
               style={{
                 background: "#22c55e",
                 color: "black",
                 padding: "12px",
                 borderRadius: "8px",
-                border: "none",
                 fontWeight: "600",
+                border: "none",
                 cursor: "pointer",
               }}
             >
