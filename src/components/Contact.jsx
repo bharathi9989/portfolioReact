@@ -11,6 +11,8 @@ export default function Contact() {
     alert("Email copied!");
   }
 
+  
+
   return (
     <section
       id="contact"
