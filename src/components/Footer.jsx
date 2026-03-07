@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 import github from "../assets/github.png";
 import linkedin from "../assets/linkedin.png";
-import mail from "../assets/Mail.png";
+import mail from "../assets/mail.png";
 
 export default function Footer() {
   return (
