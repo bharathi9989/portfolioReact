@@ -33,7 +33,7 @@ export default function Footer() {
         Full Stack Developer | React | Node | MongoDB
       </p>
 
-      {/* SOCIAL ICONS */}
+      {/* SOCIAL ICON */}
 
       <div
         style={{
