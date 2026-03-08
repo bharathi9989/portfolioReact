@@ -92,7 +92,10 @@ export default function Intro() {
           <div>
             <h1 className="hero-name text-4xl">Hi..,</h1>
           </div>
-          <h1 className="hero-name text-4xl text-yellow-400"> I'M VELUBHARATHI</h1>
+          <h1 className="hero-name text-4xl text-yellow-400">
+            {" "}
+            I'M VELUBHARATHI
+          </h1>
 
           <p className="hero-name text-6xl">Full Stack Developer</p>
         </motion.div>
