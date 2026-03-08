@@ -1,7 +1,7 @@
 import { useRef } from "react";
 
 export default function Navbar() {
-  const links = ["Home", "About", "Skills","Projects", "Contact"];
+  const links = ["Home", "About", "Skills", "Projects", "Contact"];
 
   function magnetic(e) {
     const item = e.currentTarget;
@@ -19,7 +19,7 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      <div className="logo">Velubharathi</div>
+      <div className="logo">VELUBHARATHI</div>
 
       <ul className="nav-links">
         {links.map((link, i) => (
