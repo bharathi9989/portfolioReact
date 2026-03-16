@@ -12,7 +12,7 @@ import framer from "../assets/Framer Motion.png";
 
 const auctionProject = "https://auctionsplatform.netlify.app/";
 const constrctionProject = "http://13.233.99.183/dashboard";
-const DevPortfolio = "https://www.google.com/";
+const DevPortfolio = "https://velubharathisaravanan.netlify.app";
 
 /* project data */
 
