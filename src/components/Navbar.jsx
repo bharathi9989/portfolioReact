@@ -1,4 +1,4 @@
-import { useRef } from "react";
+
 
 export default function Navbar() {
   const links = ["Home", "About", "Skills", "Certifications","Projects", "Contact"];
