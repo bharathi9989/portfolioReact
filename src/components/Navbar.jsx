@@ -1,7 +1,7 @@
 import { useRef } from "react";
 
 export default function Navbar() {
-  const links = ["Home", "About", "Skills", "Projects", "Contact"];
+  const links = ["Home", "About", "Skills", "Certifications","Projects", "Contact"];
 
   function magnetic(e) {
     const item = e.currentTarget;
