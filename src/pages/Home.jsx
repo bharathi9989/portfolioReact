@@ -8,6 +8,7 @@ import Skills from "../components/Skills";
 import TechRadar from "../components/TechRadar";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
+import Certifications from "../components/Certifications";
 
 function Home() {
   return (
@@ -32,6 +33,10 @@ function Home() {
         {/* SKILLS */}
         <section id="skills" className="py-32 text-center">
           <Skills />
+        </section>
+
+        <section id="skills" className="py-32 text-center">
+          <Certifications />
         </section>
 
         {/* TechRadar */}
