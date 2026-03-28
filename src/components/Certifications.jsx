@@ -14,9 +14,16 @@ export default function Certifications() {
 
   return (
     <section
-      id="certifications"
-      style={{ padding: "100px 0", textAlign: "center" }}
-    >
+  id="certifications"
+  style={{
+    padding: "120px 0",
+    textAlign: "center",
+    backgroundImage: `url(${certbg})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    position: "relative"
+  }}
+>
       <h2 className="hero-name">Certifications</h2>
 
       <div
