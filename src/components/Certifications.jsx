@@ -3,12 +3,12 @@ export default function Certifications() {
     {
       title: "Full Stack Development",
       org: "GUVI (IIT-Madras Incubated)",
-      link: "#",
+      link: "/src/assets/GuviCertification .png",
     },
     {
       title: "Full Stack Development",
       org: "NSDC - National Skill Development Corporation",
-      link: "#",
+      link: "src/assets/nsdcCertification.pdf",
     },
   ];
 
