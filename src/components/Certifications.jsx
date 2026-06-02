@@ -1,6 +1,7 @@
 import certbg from "../assets/cert-bg.jpg";
 import guviCert from "../assets/GuviCertification.png";
 import nsdcCert from "../assets/nsdcCertification.pdf";
+import LearnsHub from "../assets/React_certificate.png";
 
 export default function Certifications() {
   const certs = [
@@ -13,6 +14,11 @@ export default function Certifications() {
       title: "Full Stack Development",
       org: "NSDC - National Skill Development Corporation",
       link: nsdcCert,
+    },
+    {
+      title: "React certification",
+      org: "Learns-connect",
+      link: LearnsHub,
     },
   ];
 
