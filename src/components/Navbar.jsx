@@ -19,7 +19,7 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      <div className="logo">VELUBHARATHI</div>
+      <div className="logo">BHarathi</div>
 
       <ul className="nav-links">
         {links.map((link, i) => (
