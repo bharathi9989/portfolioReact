@@ -47,7 +47,7 @@ const words = [
   "MySQL",
   "Postgresql",
   "Mongoose",
-    "aws",
+  "aws",
   "Docker",
   "Git",
 ];
@@ -93,15 +93,17 @@ export default function Skills() {
           width: "90%",
           maxWidth: "1400px",
           display: "flex",
+          flexWrap: "wrap",
           alignItems: "center",
-          justifyContent: "space-between",
+          justifyContent: "space-evenly",
+          gap: "60px",
           position: "relative",
           zIndex: 2,
         }}
       >
         {/* LEFT SIDE */}
 
-        <div style={{ width: "45%" }}>
+        <div style={{ width: "100%", maxWidth: "650px" }}>
           <motion.h2
             animate={bounce ? { y: [0, -15, 0] } : {}}
             transition={{ duration: 0.4 }}
@@ -118,7 +120,7 @@ export default function Skills() {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(5,1fr)",
+              gridTemplateColumns: "repeat(auto-fit,minmax(70px,1fr))",
               gap: "35px",
             }}
           >
@@ -140,7 +142,7 @@ export default function Skills() {
                 }}
                 onHoverStart={triggerBounce}
                 style={{
-                  width: "70px",
+                  width: "60px",
                   cursor: "pointer",
                 }}
               />
@@ -152,15 +154,15 @@ export default function Skills() {
 
         <motion.div
           style={{
-            width: "500px",
-            height: "500px",
+            width: "min(90vw,500px)",
+            height: "min(90vw,500px)",
             position: "relative",
             scale,
           }}
         >
           {words.map((word, i) => {
             const angle = (360 / words.length) * i;
-            const radius = 180;
+            const radius = window.innerWidth < 640 ? 120 : 180;
 
             const x = radius * Math.cos((angle * Math.PI) / 180);
             const y = radius * Math.sin((angle * Math.PI) / 180);
