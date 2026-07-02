@@ -6,59 +6,24 @@ import linkedin from "../assets/linkedin.png";
 import mail from "../assets/mail.png";
 
 export default function Contact() {
-  function copyEmail() {
-    navigator.clipboard.writeText("er.velubharathi.s@gmail.com");
-    alert("Email copied!");
-  }
-
-  
-
   return (
     <section
       id="contact"
+      className="relative min-h-screen bg-cover bg-center flex items-center justify-center py-20 px-5"
       style={{
-        minHeight: "100vh",
         backgroundImage: `url(${bg})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        position: "relative",
-        padding: "120px 0",
       }}
     >
-      {/* overlay */}
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/75"></div>
 
-      <div
-        style={{
-          position: "absolute",
-          inset: 0,
-          background: "rgba(0,0,0,0.75)",
-        }}
-      />
-
-      <div
-        style={{
-          width: "90%",
-          maxWidth: "1200px",
-          position: "relative",
-          zIndex: 2,
-        }}
-      >
-        {/* title */}
-
+      <div className="relative z-10 w-full max-w-7xl">
+        {/* Heading */}
         <motion.h2
           initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="hero-name"
-          style={{
-            textAlign: "center",
-            fontSize: "54px",
-            color: "white",
-            marginBottom: "20px",
-          }}
+          className="hero-name text-center text-4xl md:text-5xl text-white"
         >
           Contact Me
         </motion.h2>
@@ -67,196 +32,102 @@ export default function Contact() {
           initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          style={{
-            textAlign: "center",
-            color: "#d1d5db",
-            marginBottom: "80px",
-            fontSize: "18px",
-          }}
+          className="text-center text-gray-300 mt-5 mb-14 text-base md:text-lg"
         >
           Have a project idea or job opportunity? Let's talk.
         </motion.p>
 
-        {/* layout */}
-
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gap: "60px",
-          }}
-        >
-          {/* CONTACT CARDS */}
-
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "25px",
-            }}
-          >
-            {/* EMAIL */}
-
+        {/* Main Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+          {/* Contact Cards */}
+          <div className="flex flex-col gap-6">
+            {/* Email */}
             <motion.a
               href="mailto:er.velubharathi.s@gmail.com"
-              whileHover={{ scale: 1.05 }}
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "15px",
-                background: "rgba(255,255,255,0.05)",
-                padding: "20px",
-                borderRadius: "12px",
-                border: "1px solid rgba(255,255,255,0.1)",
-                textDecoration: "none",
-              }}
+              whileHover={{ scale: 1.03 }}
+              className="flex items-center gap-5 rounded-xl border border-white/10 bg-white/5 backdrop-blur-md p-6 transition"
             >
-              <img src={mail} style={{ width: "28px" }} />
+              <img src={mail} alt="Mail" className="w-8 h-8" />
 
               <div>
-                <h4 style={{ color: "white" }}>Email</h4>
-                <p style={{ color: "#9ca3af" }}>Send me a mail</p>
+                <h4 className="text-white text-lg font-semibold">Email</h4>
+                <p className="text-gray-400">Send me a mail</p>
               </div>
             </motion.a>
 
-            {/* GITHUB */}
-
+            {/* GitHub */}
             <motion.a
               href="https://github.com/bharathi9989"
               target="_blank"
-              whileHover={{ scale: 1.05 }}
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "15px",
-                background: "rgba(255,255,255,0.05)",
-                padding: "20px",
-                borderRadius: "12px",
-                border: "1px solid rgba(255,255,255,0.1)",
-                textDecoration: "none",
-              }}
+              rel="noreferrer"
+              whileHover={{ scale: 1.03 }}
+              className="flex items-center gap-5 rounded-xl border border-white/10 bg-white/5 backdrop-blur-md p-6 transition"
             >
-              <img src={github} style={{ width: "28px" }} />
+              <img src={github} alt="GitHub" className="w-8 h-8" />
 
               <div>
-                <h4 style={{ color: "white" }}>GitHub</h4>
-                <p style={{ color: "#9ca3af" }}>View my code</p>
+                <h4 className="text-white text-lg font-semibold">GitHub</h4>
+                <p className="text-gray-400">View my code</p>
               </div>
             </motion.a>
 
-            {/* LINKEDIN */}
-
+            {/* LinkedIn */}
             <motion.a
               href="https://www.linkedin.com/in/velubharathi-s-472b62370/"
               target="_blank"
-              whileHover={{ scale: 1.05 }}
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "15px",
-                background: "rgba(255,255,255,0.05)",
-                padding: "20px",
-                borderRadius: "12px",
-                border: "1px solid rgba(255,255,255,0.1)",
-                textDecoration: "none",
-              }}
+              rel="noreferrer"
+              whileHover={{ scale: 1.03 }}
+              className="flex items-center gap-5 rounded-xl border border-white/10 bg-white/5 backdrop-blur-md p-6 transition"
             >
-              <img src={linkedin} style={{ width: "28px" }} />
+              <img src={linkedin} alt="LinkedIn" className="w-8 h-8" />
 
               <div>
-                <h4 style={{ color: "white" }}>LinkedIn</h4>
-                <p style={{ color: "#9ca3af" }}>Let's connect</p>
+                <h4 className="text-white text-lg font-semibold">LinkedIn</h4>
+                <p className="text-gray-400">Let's connect</p>
               </div>
             </motion.a>
           </div>
 
-          {/* CONTACT FORM */}
-
+          {/* Contact Form */}
           <motion.form
             initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "20px",
-              background: "rgba(255,255,255,0.05)",
-              padding: "35px",
-              borderRadius: "16px",
-              border: "1px solid rgba(255,255,255,0.1)",
-            }}
+            className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md p-8 flex flex-col gap-5"
           >
             <input
+              type="text"
               placeholder="Your Name"
-              style={{
-                padding: "14px",
-                borderRadius: "8px",
-                border: "1px solid rgba(255,255,255,0.15)",
-                background: "rgba(255,255,255,0.05)",
-                color: "white",
-                outline: "none",
-                backdropFilter: "blur(6px)",
-              }}
+              className="rounded-lg border border-white/20 bg-white/5 px-4 py-3 text-white outline-none focus:border-green-500"
             />
 
             <input
-              placeholder="Email"
-              style={{
-                padding: "14px",
-                borderRadius: "8px",
-                border: "1px solid rgba(255,255,255,0.15)",
-                background: "rgba(255,255,255,0.05)",
-                color: "white",
-                outline: "none",
-                backdropFilter: "blur(6px)",
-              }}
+              type="email"
+              placeholder="Your Email"
+              className="rounded-lg border border-white/20 bg-white/5 px-4 py-3 text-white outline-none focus:border-green-500"
             />
 
             <textarea
-              placeholder="Message"
               rows="5"
-              style={{
-                padding: "14px",
-                borderRadius: "8px",
-                border: "1px solid rgba(255,255,255,0.15)",
-                background: "rgba(255,255,255,0.05)",
-                color: "white",
-                outline: "none",
-                backdropFilter: "blur(6px)",
-              }}
+              placeholder="Your Message"
+              className="rounded-lg border border-white/20 bg-white/5 px-4 py-3 text-white outline-none resize-none focus:border-green-500"
             />
 
             <button
               type="button"
-              style={{
-                background: "#22c55e",
-                color: "black",
-                padding: "12px",
-                borderRadius: "8px",
-                fontWeight: "600",
-                border: "none",
-                cursor: "pointer",
-              }}
+              className="rounded-lg bg-green-500 py-3 font-semibold text-black transition hover:bg-green-400"
             >
               Send Message
             </button>
           </motion.form>
         </div>
 
-        {/* resume */}
-
-        <div style={{ textAlign: "center", marginTop: "70px" }}>
+        {/* Resume */}
+        <div className="mt-14 flex justify-center">
           <a
             href="/resume.pdf"
             download
-            style={{
-              background: "#22c55e",
-              color: "black",
-              padding: "12px 30px",
-              borderRadius: "8px",
-              fontWeight: "600",
-              textDecoration: "none",
-            }}
+            className="rounded-lg bg-green-500 px-8 py-3 font-semibold text-black transition hover:bg-green-400"
           >
             Download Resume
           </a>

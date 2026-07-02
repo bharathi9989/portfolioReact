@@ -6,87 +6,61 @@ import mail from "../assets/mail.png";
 
 export default function Footer() {
   return (
-    <footer
-      style={{
-        background: "rgba(0,0,0,0.9)",
-        borderTop: "1px solid rgba(255,255,255,0.1)",
-        padding: "60px 20px",
-        textAlign: "center",
-      }}
-    >
+    <footer className="bg-black/90 border-t border-white/10 py-12 px-5 text-center">
+      {/* Name */}
       <motion.h2
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="hero-name"
+        viewport={{ once: true }}
+        className="hero-name text-3xl md:text-4xl"
       >
         Velubharathi
       </motion.h2>
 
-      <p
-        style={{
-          marginTop: "10px",
-          color: "#9ca3af",
-          fontSize: "15px",
-        }}
-      >
-        Full Stack Developer | React | Node | MongoDB
+      {/* Role */}
+      <p className="mt-3 text-sm md:text-base text-gray-400">
+        Full Stack Developer | React | Node.js | MongoDB
       </p>
 
-      {/* SOCIAL ICON */}
-
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          gap: "25px",
-          marginTop: "30px",
-        }}
-      >
+      {/* Social Icons */}
+      <div className="flex justify-center items-center gap-6 mt-8">
         <motion.a
           whileHover={{ scale: 1.2 }}
           href="https://github.com/bharathi9989"
           target="_blank"
+          rel="noreferrer"
         >
-          <img src={github} style={{ width: "28px" }} />
+          <img src={github} alt="GitHub" className="w-7 md:w-8 transition" />
         </motion.a>
 
         <motion.a
           whileHover={{ scale: 1.2 }}
           href="https://www.linkedin.com/in/velubharathi-s-472b62370/"
           target="_blank"
+          rel="noreferrer"
         >
-          <img src={linkedin} style={{ width: "28px" }} />
+          <img
+            src={linkedin}
+            alt="LinkedIn"
+            className="w-7 md:w-8 transition"
+          />
         </motion.a>
 
         <motion.a
           whileHover={{ scale: 1.2 }}
           href="mailto:er.velubharathi.s@gmail.com"
         >
-          <img src={mail} style={{ width: "28px" }} />
+          <img src={mail} alt="Email" className="w-7 md:w-8 transition" />
         </motion.a>
       </div>
 
-      {/* DIVIDER */}
+      {/* Divider */}
+      <div className="w-40 md:w-52 h-[2px] mx-auto my-10 bg-gradient-to-r from-green-500 to-transparent"></div>
 
-      <div
-        style={{
-          width: "200px",
-          height: "2px",
-          margin: "40px auto",
-          background: "linear-gradient(90deg,#22c55e,transparent)",
-        }}
-      />
-
-      {/* COPYRIGHT */}
-
-      <p
-        style={{
-          color: "#6b7280",
-          fontSize: "14px",
-        }}
-      >
-        © {new Date().getFullYear()} Velubharathi. All rights reserved.
+      {/* Copyright */}
+      <p className="text-xs md:text-sm text-gray-500">
+        © {new Date().getFullYear()} Velubharathi. All Rights Reserved.
       </p>
     </footer>
   );
