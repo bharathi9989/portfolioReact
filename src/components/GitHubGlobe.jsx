@@ -11,29 +11,29 @@ export default function GitHubGlobe() {
         const commits = res.contributions.map((c) => ({
           lat: Math.random() * 180 - 90,
           lng: Math.random() * 360 - 180,
-          size: c.count,
+          size: Math.max(c.count * 0.05, 0.2),
           color: "#22c55e",
         }));
+
         setData(commits);
-      });
+      })
+      .catch((err) => console.error(err));
   }, []);
 
   return (
-    <div
-      style={{
-        width: "600px",
-        height: "500px",
-        margin: "60px auto",
-      }}
-    >
-      <Globe
-        backgroundColor="rgba(0,0,0,0)"
-        pointsData={data}
-        pointAltitude="size"
-        pointColor="color"
-        pointRadius={0.3}
-        globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
-      />
+    <div className="w-full flex justify-center mt-16 px-4">
+      <div className="w-full max-w-[600px] h-[300px] sm:h-[400px] md:h-[500px]">
+        <Globe
+          width={600}
+          height={500}
+          backgroundColor="rgba(0,0,0,0)"
+          pointsData={data}
+          pointAltitude="size"
+          pointColor="color"
+          pointRadius={0.3}
+          globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
+        />
+      </div>
     </div>
   );
 }
