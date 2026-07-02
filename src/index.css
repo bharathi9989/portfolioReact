@@ -620,3 +620,7 @@ padding:0 16px;
 }
 
 }
+
+.floating-logo{
+  transition: transform 0.1s linear;
+}

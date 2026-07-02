@@ -21,7 +21,8 @@ export default function ScrollLogos() {
     <div className="absolute inset-0 pointer-events-none">
       <img
         src="/logos/React.png"
-        className="floating-logo absolute top-20 left-10 w-12"
+        alt="React"
+        className="floating-logo absolute top-20 left-10 w-8 sm:w-10 md:w-12"
       />
       <img
         src="/logos/Node.js.png"
