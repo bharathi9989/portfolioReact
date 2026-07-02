@@ -135,7 +135,7 @@ export default function Projects() {
           style={{
             textAlign: "center",
 
-            fontSize: "54px",
+            fontSize: "clamp(36px,5vw,54px)",
 
             marginBottom: "80px",
 
@@ -154,7 +154,7 @@ export default function Projects() {
           style={{
             display: "grid",
 
-            gridTemplateColumns: "repeat(auto-fit,minmax(340px,1fr))",
+            gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))",
 
             gap: "40px",
           }}
@@ -164,6 +164,7 @@ export default function Projects() {
               key={i}
               href={p.link}
               target="_blank"
+              rel="noreferrer"
               variants={card}
               whileHover={{
                 scale: 1.05,
@@ -183,7 +184,7 @@ export default function Projects() {
 
                 border: "1px solid rgba(255,255,255,0.08)",
 
-                height: "280px",
+                minHeight: "280px",
 
                 display: "flex",
 
@@ -200,7 +201,7 @@ export default function Projects() {
 
               <h3
                 style={{
-                  fontSize: "24px",
+                  fontSize: "clamp(20px,2vw,24px)",
 
                   fontWeight: "600",
 
@@ -218,7 +219,7 @@ export default function Projects() {
                 style={{
                   color: "#d1d5db",
 
-                  fontSize: "15px",
+                  fontSize: "clamp(14px,1.8vw,15px)",
 
                   lineHeight: "1.6",
 
