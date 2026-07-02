@@ -16,8 +16,8 @@ export default function Certifications() {
       link: nsdcCert,
     },
     {
-      title: "React certification",
-      org: "Learns-connect",
+      title: "React Certification",
+      org: "Learns Connect",
       link: LearnsHub,
     },
   ];
@@ -25,64 +25,38 @@ export default function Certifications() {
   return (
     <section
       id="certifications"
+      className="relative py-20 md:py-28 bg-cover bg-center"
       style={{
-        padding: "120px 0",
-        textAlign: "center",
         backgroundImage: `url(${certbg})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        position: "relative",
       }}
     >
-      {/* Dark overlay */}
-      <div
-        style={{
-          position: "absolute",
-          inset: 0,
-          background: "rgba(0,0,0,0.75)",
-        }}
-      />
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/75"></div>
 
-      <div style={{ position: "relative", zIndex: 2 }}>
-        <h2 className="hero-name">Certifications</h2>
+      <div className="relative z-10 max-w-7xl mx-auto px-6">
+        {/* Heading */}
+        <h2 className="hero-name text-3xl md:text-5xl text-center">
+          Certifications
+        </h2>
 
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            gap: "40px",
-            marginTop: "50px",
-            flexWrap: "wrap",
-          }}
-        >
-          {certs.map((c, i) => (
+        {/* Cards */}
+        <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {certs.map((cert, index) => (
             <div
-              key={i}
-              style={{
-                border: "1px solid rgba(255,255,255,0.1)",
-                padding: "30px",
-                borderRadius: "12px",
-                width: "280px",
-                background: "rgba(255,255,255,0.05)",
-                backdropFilter: "blur(10px)",
-              }}
+              key={index}
+              className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(34,197,94,0.35)]"
             >
-              <h3 style={{ color: "white" }}>{c.title}</h3>
+              <h3 className="text-xl font-semibold text-white">{cert.title}</h3>
 
-              <p style={{ color: "#9ca3af" }}>{c.org}</p>
+              <p className="mt-3 text-gray-400 leading-7">{cert.org}</p>
 
               <a
-                href={c.link}
+                href={cert.link}
                 target="_blank"
                 rel="noreferrer"
-                style={{
-                  color: "#22c55e",
-                  marginTop: "12px",
-                  display: "inline-block",
-                  fontWeight: "500",
-                }}
+                className="inline-block mt-6 text-green-400 font-semibold hover:text-green-300 transition"
               >
-                View Certificate
+                View Certificate →
               </a>
             </div>
           ))}
