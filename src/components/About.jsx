@@ -96,7 +96,7 @@ export default function About() {
         >
           <h2
             style={{
-              fontSize: "46px",
+              fontSize: "clamp(32px,5vw,46px)",
               color: "#ffee32",
               fontFamily: "cursive",
               marginBottom: "20px",
@@ -105,17 +105,29 @@ export default function About() {
             About Me
           </h2>
 
-          <p style={{ fontSize: "20px", lineHeight: "1.7" }}>
+          <p style={{ fontSize: "clamp(16px,2vw,20px)", lineHeight: "1.7" }}>
             Hi, I'm a Well-qualified Full Stack Developer familiar with a wide
             range of programming utilities and languages.
           </p>
 
-          <p style={{ marginTop: "15px", fontSize: "20px", lineHeight: "1.7" }}>
+          <p
+            style={{
+              marginTop: "15px",
+              fontSize: "clamp(16px,2vw,20px)",
+              lineHeight: "1.7",
+            }}
+          >
             Knowledgeable of backend and frontend development requirements with
             database management. Handles any part of the process with ease.
           </p>
 
-          <p style={{ marginTop: "15px", fontSize: "20px", lineHeight: "1.7" }}>
+          <p
+            style={{
+              marginTop: "15px",
+              fontSize: "clamp(16px,2vw,20px)",
+              lineHeight: "1.7",
+            }}
+          >
             Collaborative team player with a willingness to learn and grow with
             the organization.
           </p>
@@ -125,8 +137,8 @@ export default function About() {
 
         <div
           style={{
-            width: "420px",
-            height: "420px",
+            width: "min(90vw,420px)",
+            height: "min(90vw,420px)",
             perspective: "1000px",
             display: "flex",
             alignItems: "center",
@@ -136,8 +148,8 @@ export default function About() {
           <div
             style={{
               position: "relative",
-              width: "360px",
-              height: "360px",
+              width: "100%",
+              height: "100%",
               transformStyle: "preserve-3d",
               transform: `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
               animation: "orbitRotate 20s linear infinite",
@@ -153,10 +165,10 @@ export default function About() {
                   className="orbit-logo"
                   style={{
                     position: "absolute",
-                    width: "70px",
+                    width: window.innerWidth < 640 ? "45px" : "70px",
                     top: "50%",
                     left: "50%",
-                    transform: `rotate(${angle}deg) translate(160px) rotate(-${angle}deg)`,
+                    transform: `rotate(${angle}deg) translate(${window.innerWidth < 640 ? 105 : 160}px) rotate(-${angle}deg)`,
                   }}
                 />
               );
@@ -187,12 +199,10 @@ export default function About() {
         }
 
         .orbit-logo:hover{
-
-          transform:scale(1.2)
-          drop-shadow(0 0 15px #22c55e)
-          drop-shadow(0 0 35px #22c55e);
-
-        }
+transform:scale(1.15);
+filter:drop-shadow(0 0 15px #22c55e)
+drop-shadow(0 0 35px #22c55e);
+}
 
         `}
       </style>
