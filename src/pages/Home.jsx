@@ -1,4 +1,3 @@
-
 import About from "../components/About";
 import Projects from "../components/Projects";
 
@@ -18,36 +17,45 @@ function Home() {
         {/* HERO */}
         <section
           id="home"
-          className="h-screen flex items-center justify-center"
+          className="min-h-screen flex items-center justify-center px-4"
         >
           <Intro />
         </section>
 
-        {/* ABOUT */}
         <section
           id="about"
-          className="py-32 px-6 flex items-center justify-center"
+          className="py-16 md:py-24 lg:py-32 px-4 md:px-6 flex items-center justify-center"
         >
           <About />
         </section>
-        {/* SKILLS */}
-        <section id="skills" className="py-32 text-center">
+
+        <section
+          id="skills"
+          className="py-16 md:py-24 lg:py-32 px-4 text-center"
+        >
           <Skills />
         </section>
 
-        <section id="skills" className="py-32 text-center">
+        <section
+          id="certifications"
+          className="py-16 md:py-24 lg:py-32 px-4 text-center"
+        >
           <Certifications />
         </section>
 
-        {/* TechRadar */}
-        <section id="skills" className="py-32 text-center">
+        <section
+          id="tech-radar"
+          className="py-16 md:py-24 lg:py-32 px-4 text-center"
+        >
           <TechRadar />
         </section>
-        {/* PROJECTS */}
-        <section id="projects" className="py-32 text-center">
+
+        <section
+          id="projects"
+          className="py-16 md:py-24 lg:py-32 px-4 text-center"
+        >
           <Projects />
         </section>
-
         {/* CONTACT */}
         <section>
           <Contact />
