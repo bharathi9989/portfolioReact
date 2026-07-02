@@ -35,10 +35,11 @@ export default function About() {
       id="about"
       onMouseMove={handleMouseMove}
       style={{
-        height: "100vh",
+        minHeight: "100vh",
         width: "100%",
         position: "relative",
         overflow: "hidden",
+        padding: "40px 20px",
       }}
     >
       {/* BACKGROUND */}
@@ -70,13 +71,15 @@ export default function About() {
         style={{
           position: "relative",
           zIndex: 2,
-          width: "90%",
-          maxWidth: "1400px",
+          width: "100%",
+          maxWidth: "1200px",
           margin: "0 auto",
-          height: "100%",
+          minHeight: "100vh",
           display: "flex",
+          flexWrap: "wrap",
           alignItems: "center",
-          justifyContent: "space-between",
+          justifyContent: "space-evenly",
+          gap: "50px",
         }}
       >
         {/* TEXT */}
@@ -85,7 +88,11 @@ export default function About() {
           initial={{ x: -250 }}
           whileInView={{ x: 0 }}
           transition={{ duration: 1 }}
-          style={{ width: "600px", color: "white" }}
+          style={{
+            width: "100%",
+            maxWidth: "600px",
+            color: "white",
+          }}
         >
           <h2
             style={{
