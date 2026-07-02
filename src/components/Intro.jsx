@@ -70,7 +70,15 @@ export default function Intro() {
       <div className="absolute inset-0 bg-black/70"></div>
 
       {/* Logo Circle */}
-      <div className="relative flex items-center justify-center w-[240px] h-[240px] sm:w-[320px] sm:h-[320px] md:w-[420px] md:h-[420px] lg:w-[500px] lg:h-[500px]">
+      <div
+        className="relative flex items-center justify-center w-[220px] h-[220px]
+
+sm:w-[320px] sm:h-[320px]
+
+md:w-[420px] md:h-[420px]
+
+lg:w-[500px] lg:h-[500px] sm:w-[320px] sm:h-[320px] md:w-[420px] md:h-[420px] lg:w-[500px] lg:h-[500px]"
+      >
         {logos.map((logo, i) => {
           const angle = (360 / logos.length) * i;
 
@@ -121,11 +129,11 @@ export default function Intro() {
             Hi..,
           </h1>
 
-          <h1 className="hero-name mt-2 text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-yellow-400">
+          <h1 className="hero-name mt-2 text-2xl sm:text-3xl md:text-4xl lg:text-6xl text-yellow-400">
             I'M VELUBHARATHI
           </h1>
 
-          <p className="hero-name mt-3 text-base sm:text-xl md:text-3xl lg:text-5xl">
+          <p className="hero-name mt-3 text-lg sm:text-xl md:text-3xl lg:text-5xl">
             Full Stack Developer
           </p>
         </motion.div>

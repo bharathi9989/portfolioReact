@@ -28,8 +28,9 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="navbar">
-      <div className="logo">VELUBHARATHI S</div>
+    <nav className="navbar z-50">
+      {/* Logo */}
+      <div className="logo cursor-pointer">VELUBHARATHI S</div>
 
       {/* Desktop Menu */}
       <ul className="nav-links hidden md:flex">
@@ -48,18 +49,26 @@ export default function Navbar() {
       </ul>
 
       {/* Mobile Button */}
-      <button className="md:hidden text-white" onClick={() => setOpen(!open)}>
-        {open ? <X size={28} /> : <Menu size={28} />}
+      <button
+        className="md:hidden text-white z-50"
+        onClick={() => setOpen(!open)}
+        aria-label="Toggle Menu"
+      >
+        {open ? <X size={30} /> : <Menu size={30} />}
       </button>
 
       {/* Mobile Menu */}
-      {open && (
-        <ul className="absolute top-16 left-0 w-full bg-black flex flex-col items-center gap-6 py-6 md:hidden">
+      <div
+        className={`absolute top-16 left-0 w-full bg-black/95 backdrop-blur-md transition-all duration-300 md:hidden shadow-lg ${
+          open ? "block" : "hidden"
+        }`}
+      >
+        <ul className="flex flex-col items-center gap-6 py-8">
           {links.map((link, i) => (
             <li key={i}>
               <a
                 href={`#${link.toLowerCase()}`}
-                className="nav-item"
+                className="nav-item text-lg"
                 onClick={() => setOpen(false)}
               >
                 {link}
@@ -67,7 +76,7 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-      )}
+      </div>
     </nav>
   );
 }
